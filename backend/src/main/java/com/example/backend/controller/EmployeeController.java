@@ -25,6 +25,7 @@ public class EmployeeController {
     }
 
     // create a new employee rest api
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/employees")
     public Employee createEmployee(@RequestBody Employee employee){
         return employeeRepository.save(employee);
