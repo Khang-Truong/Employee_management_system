@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee';
 
 @Component({
@@ -6,8 +6,17 @@ import { Employee } from '../employee';
   templateUrl: './create-employee.component.html',
   styleUrls: ['./create-employee.component.css']
 })
-export class CreateEmployeeComponent {
+export class CreateEmployeeComponent implements OnInit{
 
   employee: Employee = new Employee();
 
+  constructor(){}
+
+  ngOnInit(): void {
+    
+  }
+
+  onSubmit(){
+    console.log(this.employee);
+  }
 }
